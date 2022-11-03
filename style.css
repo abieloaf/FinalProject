@@ -13,6 +13,10 @@
     min-width: 100vw;
 }
 
+.Link-tambah{
+    color: #000 !important;
+}
+
 .search-bar{
     background-color: transparent;
     border: 1px solid #090A0A;
