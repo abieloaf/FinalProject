@@ -37,7 +37,7 @@ function fungsiListCerita(){
             if(data.notes.length>0){
                 let List='';
                 for(i=0;i<data.notes.length;i++){
-                    if(data.notes[i].title.includes(document.getElementById('filter').value)){
+                    if(data.notes[i].title.toLowerCase().includes(document.getElementById('filter').value.toLowerCase())){
                         List+=`
                         <a href="${window.location.href.replace('home','bacacatatan')}?${data.notes[i].id}">
                             <div class="card mb-3 card-style">
@@ -86,7 +86,7 @@ function fungsiDeleteCerita(){
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer  MzQ5ZmQ4NTktYTIzYi00ZGM0LWFjOGUtYTJkNjc2YWQxMzcx '
+            'Authorization': 'Bearer MzQ5ZmQ4NTktYTIzYi00ZGM0LWFjOGUtYTJkNjc2YWQxMzcx'
         },
         body: JSON.stringify({ id: id }),
         })
